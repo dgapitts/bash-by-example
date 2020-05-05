@@ -1,4 +1,4 @@
-
+#!/bin/bash
 ### cleanup old file (touch in case of !exists)
 touch random.log;rm random.log
 ### generate 30000 random numbers before 0 and 10000 ... the 95th should be 'around 9500' (i.e  +/-100)
