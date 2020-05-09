@@ -147,9 +147,9 @@ Date:   Sun May 3 17:33:29 2020 +0000
     example_002_bash_random_and_awk_95th_percentile
 ```
 
-### Exclusing files and/or file-types you don't want to install
+### Excluding specific files and/or broader paths/file-types, that you don't want to install
 
-The .DS_Store files are autogenerate by MacOSX...
+For example the .DS_Store files are autogenerate by MacOSX (ito help the File System browser app)
 
 ```
 ~/projects/bash-by-example $ git status
