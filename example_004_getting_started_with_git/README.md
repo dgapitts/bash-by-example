@@ -147,4 +147,61 @@ Date:   Sun May 3 17:33:29 2020 +0000
     example_002_bash_random_and_awk_95th_percentile
 ```
 
+### Exclusing files and/or file-types you don't want to install
+
+The .DS_Store files are autogenerate by MacOSX...
+
+```
+~/projects/bash-by-example $ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	.vscode/
+	example_002_bash_random_and_awk_95th_percentile/.DS_Store
+	example_003_vscode-bash-debug_setup_and_brew/.DS_Store
+	random.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+exclude the files and paths/extensions you never want to add
+
+```
+~/projects/bash-by-example $ vi .gitignore
+~/projects/bash-by-example $ cat .gitignore
+*/.DS_Store
+.vscode
+.DS_Store
+```
+
+and now git status is more readable
+
+```
+~/projects/bash-by-example $ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+	random.log
+```
+
 
