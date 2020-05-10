@@ -204,5 +204,41 @@ Untracked files:
 	random.log
 ```
 
-test
+
+
+### git config local vs gloobal
+
+Here is my local repository details 
+
+```
+~/projects/bash-by-example $ git config --local --list
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=git@github.com:dgapitts/bash-by-example.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+```
+
+and some global details
+```
+~/projects/bash-by-example $ git config --global --list
+user.name=dgapitts
+user.email=dgappitts@gmail.com
+
+which I can quickly correct:
+
+```
+~/projects/bash-by-example $ git config --global user.email dgapitts@gmail.com
+~/projects/bash-by-example $ git config --global --list
+user.name=dgapitts
+user.email=dgapitts@gmail.com
+```
+
+
+
 
