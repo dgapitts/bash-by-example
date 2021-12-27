@@ -3,6 +3,17 @@
 
 Some notes and examples of bash commands and common command line utilities I frequently use from bash.
 
+
+
+## example_006_introducing_ShellCheck
+[RHEL setup shellcheck](example_006_introducing_ShellCheck/README.md)
+
+## example_005_awk_special_characters
+[awk escape characters, single quote and new_lines](example_005_awk_special_characters/README.md)
+
+## example_004_getting_started_with_git
+[intro to git cli](example_004_getting_started_with_git/README.md)
+
 ## example_003_vscode-bash-debug_setup_and_brew
 - While I've routinely worked with bash directly on the command-line (on a daily basis) for almost the last two decades (in the early days I was using ksh and csh), more recently I've started using Visual Studio Code and a debugger extension
 - https://github.com/rogalmic/vscode-bash-debug
