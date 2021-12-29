@@ -4,8 +4,11 @@
 Some notes and examples of bash commands and common command line utilities I frequently use from bash.
 
 
+## example_007_find_xargs_grepH
 
-## example_006_introducing_ShellCheck
+[find with xargs and grep -H for deep search](example_007_find_xargs_grepH/README.md)
+
+## example_006_introducing_ShellCheck (to be completed)
 [RHEL setup shellcheck](example_006_introducing_ShellCheck/README.md)
 
 ## example_005_awk_special_characters
