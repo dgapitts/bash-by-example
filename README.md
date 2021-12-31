@@ -3,6 +3,7 @@
 
 Some notes and examples of bash commands and common command line utilities I frequently use from bash.
 
+A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
 ## example_007_find_xargs_grepH
 
