@@ -1,4 +1,0 @@
-#!/bin/bash
-foo = 42
-bar=007
-echo $foo

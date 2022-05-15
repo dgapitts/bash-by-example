@@ -1,4 +1,18 @@
-### Setup
+## Demo
+
+
+`shellcheck` is a great tool for tightening up your shell scripts
+
+Below I give a quick demo of how to setup and use `shellcheck`, plus some examples of the following errors
+
+* SC1068: Don't put spaces around the = in assignments.
+* SC2034: bar appears unused. Verify it or export it.
+* SC2006: Use $(..) instead of legacy `..`.
+* SC2086: Double quote to prevent globbing and word splitting.
+
+
+
+### Setup - rpm package(s)
 
 For RHEL/Centos:
 
@@ -8,31 +22,64 @@ For RHEL/Centos:
   yum -y install ShellCheck
 ```
 
-### Simple example
 
-Here is my demo problematic script:
+
+### Start 
 
 ```
-[pg12centos7:vagrant:~/bash-by-example/example_006_introducing_ShellCheck] # cat myscript 
+[pg13-db1:root:~/ShellCheck] # cat demo-start.sh
 #!/bin/bash
 foo = 42
 bar=007
 echo $foo
+current_user=`env|grep ^USER|cut -d'=' -f2`
+echo $current_user
 ```
 
-and running shellcheck
-```
-[pg12centos7:vagrant:~/bash-by-example/example_006_introducing_ShellCheck] # shellcheck myscript 
+and
 
-In myscript line 2:
+```
+[pg13-db1:root:~/ShellCheck] # shellcheck demo-start.sh
+
+In demo-start.sh line 2:
+#!/bin/bash
 foo = 42
     ^-- SC1068: Don't put spaces around the = in assignments.
 
 
-In myscript line 3:
+In demo-start.sh line 3:
 bar=007
 ^-- SC2034: bar appears unused. Verify it or export it.
+
+
+In demo-start.sh line 5:
+current_user=`env|grep ^USER|cut -d'=' -f2`
+             ^-- SC2006: Use $(..) instead of legacy `..`.
+
+
+In demo-start.sh line 6:
+echo $current_user
+     ^-- SC2086: Double quote to prevent globbing and word splitting.
 ```
 
-You can also test this online https://www.shellcheck.net/
 
+
+### Finish
+
+```
+[pg13-db1:root:~/ShellCheck] # cat demo-finish.sh
+#!/bin/bash
+foo=42
+echo $foo
+current_user=$(env|grep ^USER|cut -d'=' -f2)
+echo "${current_user}"
+[pg13-db1:root:~/ShellCheck] # shellcheck demo-finish.sh
+[pg13-db1:root:~/ShellCheck] #
+```
+
+and 
+
+```
+~/projects/bash-by-example/example_006_introducing_ShellCheck $ env|grep ^USER|cut -d'=' -f2
+dave
+```
