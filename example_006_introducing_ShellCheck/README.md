@@ -80,6 +80,11 @@ echo "${current_user}"
 and 
 
 ```
-~/projects/bash-by-example/example_006_introducing_ShellCheck $ env|grep ^USER|cut -d'=' -f2
-dave
+[pg13-db1:root:~/ShellCheck] # sdiff demo-start.sh demo-finish.sh
+#!/bin/bash							#!/bin/bash
+foo = 42						      |	foo=42
+bar=007							      <
+echo $foo							echo $foo
+current_user=`env|grep ^USER|cut -d'=' -f2`		      |	current_user=$(env|grep ^USER|cut -d'=' -f2)
+echo $current_user					      |	echo "${current_user}"
 ```
