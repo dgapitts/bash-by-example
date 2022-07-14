@@ -5,6 +5,10 @@ Some notes and examples of bash commands and common command line utilities I fre
 
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
+##  example_009_chmod_read_write_exec
+
+[While git does not support write-only access this is common elsewhere](example_009_chmod_read_write_exec/README.md)
+
 ## example_007_find_xargs_grepH
 
 [find with xargs and grep -H for deep search](example_007_find_xargs_grepH/README.md)
