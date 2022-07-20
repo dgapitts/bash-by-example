@@ -4,7 +4,29 @@ As per this StackOverflow thread asking [how-to-setup-github-write-only-access](
 
 > You cannot do this. You cannot make updates to a Git repository without first reading (cloning) the repository. Git deals in commits, and for a user to create a new commit, they need to have the previous commit and its commit ID.
 
-This slightly counter intuitive, as traditional posix shell as write-only, although as above the git delta based approach means it can not support write-only
+This slightly counter intuitive, as traditional posix shell as write-only, although as above the git delta based approach means it can not support write-only e.g. this "error: unable to index file" 
+
+```
+~/projects/bash-by-example $ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	example_009_chmod_read_write_exec/test_read_only.log
+	example_009_chmod_read_write_exec/test_write_only.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+~/projects/bash-by-example $ git add example_009_chmod_read_write_exec/test_read_only.log
+~/projects/bash-by-example $ git add example_009_chmod_read_write_exec/test_write_only.log
+error: open("example_009_chmod_read_write_exec/test_write_only.log"): Permission denied
+error: unable to index file 'example_009_chmod_read_write_exec/test_write_only.log'
+fatal: adding files failed
+~/projects/bash-by-example $ ls -ltr example_009_chmod_read_write_exec/test_write_only.log
+--w-------  1 dave  staff  19 Jul 11 05:06 example_009_chmod_read_write_exec/test_write_only.log
+~/projects/bash-by-example $ ls -ltr example_009_chmod_read_write_exec/test_read_only.log 
+-r--------  1 dave  staff  29 Jul 11 05:09 example_009_chmod_read_write_exec/test_read_only.log
+```
 
 ## chmod by example
 
