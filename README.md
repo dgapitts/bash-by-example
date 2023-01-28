@@ -7,8 +7,9 @@ A lot of the examples here are similar to stackoverflow threads, but here I get 
 
 
 
-## example_011 atop
-[yum install atop via epel](docs/yum-install-atop-via-epel.md)
+## example_011 atop - yum install and 
+* [yum install atop via epel](docs/yum-install-atop-via-epel.md)
+* [atop extra config](docs/atop-extra-config.md)
 
 ## example_010 extra_alias_start_stop_postgres
 [Some custom extra alias](example_010_extra_alias_start_stop_postgres/README.md)
