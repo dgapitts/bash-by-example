@@ -6,11 +6,17 @@ Some notes and examples of bash commands and common command line utilities I fre
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
 
+## example 012 - simple load testing via pgbench
 
-## example_011 atop - yum install and 
+* [yum install postgresql](docs/yum-install-postgresql.md)
+
+
+## example_011 atop - yum install and config
 * [yum install atop via epel](docs/yum-install-atop-via-epel.md)
 * [atop extra config](docs/atop-extra-config.md)
 * [htop-intro](docs/htop-intro.md)
+
+
 ## example_010 extra_alias_start_stop_postgres
 [Some custom extra alias](example_010_extra_alias_start_stop_postgres/README.md)
 
