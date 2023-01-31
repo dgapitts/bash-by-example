@@ -9,7 +9,7 @@ A lot of the examples here are similar to stackoverflow threads, but here I get 
 ## example 012 - simple load testing via pgbench
 
 * [yum install postgresql](docs/yum-install-postgresql.md)
-
+* [postgresql13-contrib required for pgbench (plus bse usage notes)](docs/postgresql13-contrib_required-for-pgbench.md)
 
 ## example_011 atop - yum install and config
 * [yum install atop via epel](docs/yum-install-atop-via-epel.md)
