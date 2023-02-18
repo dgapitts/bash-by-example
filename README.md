@@ -6,6 +6,23 @@ Some notes and examples of bash commands and common command line utilities I fre
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
 
+
+## example 013 - adding an alias
+
+
+Starting with `projects` directory
+```
+[~] # ls -l | grep proj
+drwxrwxr-x 26 dpitts     4096 feb 13 23:26 projects/
+```
+
+create an alias `scripts`
+```
+[~] # ln -s projects scripts
+[~] # ls -l | grep proj
+drwxrwxr-x 26 dpitts     4096 feb 13 23:26 projects/
+lrwxrwxrwx  1 dpitts        8 feb 18 23:01 scripts -> projects/
+```
 ## example 012 - simple load testing via pgbench
 
 * [yum install postgresql](docs/yum-install-postgresql.md)
