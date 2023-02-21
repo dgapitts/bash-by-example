@@ -6,6 +6,24 @@ Some notes and examples of bash commands and common command line utilities I fre
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
 
+## example 014 - which: command not found
+
+I thought `which` was part of the standard bash shell, apparently not
+```
+-bash-4.2$ which psql
+-bash: which: command not found
+-bash-4.2$ exit                     
+logout
+-bash-4.2# yum install -y which
+Loaded plugins: ovl
+Resolving Dependencies
+--> Running transaction check
+---> Package which.x86_64 0:2.20-7.el7 will be installed
+--> Finished Dependency Resolution
+```
+
+I suspect `which` is standard for rhel and ubuntu, but maybe not in more minimal docker linux images?
+
 
 ## example 013 - adding an alias
 
