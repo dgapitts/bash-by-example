@@ -6,6 +6,37 @@ Some notes and examples of bash commands and common command line utilities I fre
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
 
+## example 15 - bash loop with limit $1
+
+
+I've been struggling with running bash loops with input parameters of the format `{1..$1}` ... this never quite works for me (I've tried a few iterations).
+
+The solution appears to be to use a while loop
+```
+[root@c7-master vagrant]# cat loop.sh 
+#echo $1
+i=1
+while [ "$i" -le "$1" ]; do
+   uptime
+   sleep 2
+   i=$((i+1))
+   #echo $i
+done
+```
+e.g.
+```
+[root@c7-master vagrant]# bash loop.sh 3
+ 21:26:02 up 19 days, 50 min,  2 users,  load average: 0.00, 0.01, 0.05
+ 21:26:04 up 19 days, 50 min,  2 users,  load average: 0.00, 0.01, 0.05
+ 21:26:06 up 19 days, 50 min,  2 users,  load average: 0.00, 0.01, 0.05
+[root@c7-master vagrant]# bash loop.sh 4
+ 21:26:10 up 19 days, 50 min,  2 users,  load average: 0.00, 0.01, 0.05
+ 21:26:12 up 19 days, 50 min,  2 users,  load average: 0.00, 0.01, 0.05
+ 21:26:14 up 19 days, 50 min,  2 users,  load average: 0.00, 0.01, 0.05
+ 21:26:16 up 19 days, 50 min,  2 users,  load average: 0.00, 0.01, 0.05
+[root@c7-master vagrant]# 
+```
+
 ## example 014 - which: command not found
 
 I thought `which` was part of the standard bash shell, apparently not
