@@ -6,6 +6,10 @@ Some notes and examples of bash commands and common command line utilities I fre
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
 
+## example 16 - psql - probably the best command line db editor
+
+* psql -E or set ECHO_HIDDEN to pg_catalog metadata - VERY USEFUL - [details here](docs/psql-E-or-ECHO_HIDDEN.md)
+
 ## example 15 - bash loop with limit $1
 
 
