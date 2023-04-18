@@ -6,6 +6,33 @@ Some notes and examples of bash commands and common command line utilities I fre
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
 
+## example 17 - getting started with conda and jupyter notebook
+
+
+* Download anacondo
+
+https://www.anaconda.com/products/distribution
+
+* Setup pandas_playground
+
+```
+conda info --envs
+conda activate pandas_playground
+conda install pandas jupyter bottleneck numexpr matplotlib
+conda update --all
+
+```
+
+* Final from terminal 
+
+```
+jupyter notebook
+```
+
+
+
+
+
 ## example 16 - psql - probably the best command line db editor
 
 * psql -E or set ECHO_HIDDEN to pg_catalog metadata - VERY USEFUL - [details here](docs/psql-E-or-ECHO_HIDDEN.md)
