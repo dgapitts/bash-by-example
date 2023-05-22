@@ -6,6 +6,29 @@ Some notes and examples of bash commands and common command line utilities I fre
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
 
+
+## example 18 - setting terminal on new macbook
+
+Add iterm2 via brew:
+```
+brew install --cask iterm2
+```
+
+Add the following shortcuts
+```
+alias h='history'
+alias h40='history|tail -40'
+alias hl='history|less'
+alias l40='ls -ltr|tail -40'
+alias lt='ls -ltr|tail -10'
+alias ht='history|tail -10'
+```
+Set bash to the default shell
+```
+# https://superuser.com/questions/48226/how-do-i-set-my-shell-in-mac-os-x
+chsh -s /bin/bash
+```
+
 ## example 17 - getting started with conda and jupyter notebook
 
 
