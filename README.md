@@ -5,7 +5,21 @@ Some notes and examples of bash commands and common command line utilities I fre
 
 A lot of the examples here are similar to stackoverflow threads, but here I get to record my favorite solutions and demo why I like them and give some extra context?
 
+## example 19 - simple PS1 settings to help with bash shell
 
+I asked GhatGPT "What are common PS1 settings to help with bash programming?" and after a bit oof trial and error, I added these 
+```
+$ tail -n 4 ~/.bash_profile
+PS1="\w \$(parse_git_branch) \$ "
+parse_git_branch() {
+    git branch 2>/dev/null | grep '^*' | colrm 1 2
+}
+```
+and now my prompt is 
+```
+~/projects/bash-by-example master $ echo "hello PS1 world:" $PS1
+hello PS1 world: \w $(parse_git_branch) $
+```
 
 ## example 18 - setting terminal on new macbook
 
